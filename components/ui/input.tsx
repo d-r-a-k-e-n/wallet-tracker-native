@@ -1,12 +1,15 @@
 import { useThemeColor } from '@/hooks/use-theme-color';
 import { StyleSheet, TextInput } from 'react-native';
 
-interface Prop {
+interface IProp {
   placeholder: string;
   keyboardType?: 'default' | 'email-address' | 'numeric' | 'phone-pad';
 }
 
-export default function Input({ placeholder, keyboardType = 'default' }: Prop) {
+export default function Input({
+  placeholder,
+  keyboardType = 'default',
+}: IProp) {
   const borderColor = useThemeColor({}, 'text');
 
   return (

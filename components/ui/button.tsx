@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text } from 'react-native';
 
 type Variant = 'default' | 'accent' | 'disabled';
 
-interface Prop {
+interface IProp {
   textButton: string;
   disabled?: boolean;
   variant?: Variant;
@@ -15,7 +15,7 @@ export default function Button({
   disabled = false,
   variant = 'accent',
   onPress,
-}: Prop) {
+}: IProp) {
   const accent = useThemeColor({}, 'tint');
   const background = useThemeColor({}, 'background');
   const light = useThemeColor({}, 'light');
